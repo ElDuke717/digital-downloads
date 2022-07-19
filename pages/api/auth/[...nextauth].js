@@ -21,13 +21,10 @@ export default NextAuth({
 
   debug: true,
   adapter: PrismaAdapter(prisma),
-	
-	callbacks: {
+
+  callbacks: {
     session: async ({ session, user }) => {
       session.user.id = user.id
-			session.user.image = user.image
-      session.user.username = user.username
-      session.user.name = user.name
       return Promise.resolve(session)
     },
   },

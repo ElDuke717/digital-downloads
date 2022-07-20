@@ -1,9 +1,19 @@
 import Head from 'next/head'
-import Image from 'next/image'
-
+import Heading from 'components/Heading'
 
 export default function Home() {
   return (
-    <div className="container">Welcome!</div>
+    <div>
+      <Head>
+        <title>Digital Downloads</title>
+        <meta name='description' content='Digital Downloads Website' />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+
+
+      <Heading />
+
+      <h1 className='flex justify-center mt-20 text-xl'>Welcome!</h1>
+    </div>
   )
 }
